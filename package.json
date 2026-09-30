@@ -1,0 +1,17 @@
+{
+  "name": "github-repo-evaluator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web app that evaluates GitHub repositories for code quality, security, and best coding practices.",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently -n server,client -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "start:server": "npm start --prefix server",
+    "build:client": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "github-repo-evaluator-server",
+  "version": "1.0.0",
+  "description": "Backend API that crawls a GitHub repository and evaluates it for code quality, security, and best practices using an LLM.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --use-system-ca src/index.js",
+    "dev": "node --use-system-ca --watch src/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "openai": "^4.68.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
